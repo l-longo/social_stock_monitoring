@@ -15,14 +15,14 @@ st.markdown("""
             color: red;
         }
         h1, h2, h3, h4, h5, h6, p, label, div, span {
-            color: white !important;
+            color: red !important;
         }
         .stSelectbox div[data-baseweb="select"] > div {
             background-color: black !important;
             color: red !important;
         }
         .stSelectbox div[data-baseweb="select"] span {
-            color: white !important;
+            color: red !important;
         }
     </style>
     """, unsafe_allow_html=True)
