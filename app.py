@@ -32,7 +32,7 @@ st.markdown("""
     <style>
         /* Change title color */
         h1 {
-            color: red !important;
+            color: white !important;
         }
 
         /* Change link color */
@@ -41,12 +41,12 @@ st.markdown("""
             text-decoration: none;
         }
         a:hover {
-            color: orange !important;
+            color: white !important;
         }
 
         /* Change disclaimer text color */
         strong {
-            color: cyan !important;
+            color: white !important;
         }
     </style>
     """, unsafe_allow_html=True)
