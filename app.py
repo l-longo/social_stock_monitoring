@@ -16,6 +16,8 @@ st.markdown("""
         h1, h2, h3, h4, h5, h6, p, label, div, span {
             color: white !important;
         }
+        
+        /* Styling the selectbox dropdown */
         .stSelectbox div[data-baseweb="select"] > div {
             background-color: black !important;
             color: red !important;
@@ -23,8 +25,23 @@ st.markdown("""
         .stSelectbox div[data-baseweb="select"] span {
             color: red !important;
         }
+
+        /* Styling the dropdown menu */
+        div[data-baseweb="popover"] {
+            background-color: black !important;
+            border: 1px solid red !important;
+        }
+        div[data-baseweb="option"] {
+            background-color: black !important;
+            color: red !important;
+        }
+        div[data-baseweb="option"]:hover {
+            background-color: red !important;
+            color: black !important;
+        }
     </style>
     """, unsafe_allow_html=True)
+
 
 # Get current working directory
 path_saved = os.getcwd() + '/saved_df_update/'
