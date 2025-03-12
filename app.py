@@ -1,14 +1,34 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import plotly.express as px
 import networkx as nx
 import os
+
+# Set page config with dark mode theme
+st.set_page_config(page_title="Financial Data and Network Analysis", layout="wide")
+st.markdown("""
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .stApp {
+            background-color: black;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 # Get current working directory
 path_saved = os.getcwd() + '/saved_df_update/'
 
 # Streamlit app title
 st.title("Financial Data and Network Analysis")
+
+# Provide link to the paper
+st.markdown("[Read the paper](https://www.tandfonline.com/doi/full/10.1080/14697688.2025.2464179)")
+
+# Include disclaimer
+st.markdown("**Disclaimer:** The views are my own and not necessarily those of the European Commission")
 
 # Select ticker
 ticker = st.selectbox("Select a ticker:", ['amc', 'gme', 'tsla'])
@@ -36,18 +56,14 @@ alter_dates_nvda = pd.to_datetime(alter_dates_nvda, errors="coerce")
 
 # Plot the Close column
 st.subheader(f"{ticker.upper()} Close Price with Highlighted Dates")
-fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df_financial["Close"]["2024":].diff(), label="Close Price", color="blue")
+df_financial['Close_diff'] = df_financial["Close"].diff()
+fig = px.line(df_financial, x=df_financial.index, y="Close_diff", title=f"{ticker.upper()} Close Price with Highlighted Dates")
 
 for date in alter_dates_nvda:
-    ax.axvline(date, color="red", linestyle="--", alpha=0.7)
-    ax.axvspan(date, date + pd.Timedelta(days=20), color="gray", alpha=0.3)
+    fig.add_vline(x=date, line=dict(color="red", width=2, dash="dash"))
+    fig.add_vrect(x0=date, x1=date + pd.Timedelta(days=20), fillcolor="gray", opacity=0.3, line_width=0)
 
-ax.set_xlabel("Date")
-ax.set_ylabel("Close Price")
-ax.legend()
-ax.grid(True)
-st.pyplot(fig)
+st.plotly_chart(fig)
 
 # Network graph selection
 show_network = st.checkbox("Show Network Graph")
