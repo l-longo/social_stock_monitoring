@@ -43,11 +43,15 @@ st.markdown("""
         a:hover {
             color: white !important;
         }
-
-        /* Change disclaimer text color */
-        strong {
+         /* Change disclaimer text color */
+        p {
             color: white !important;
         }
+        p strong {
+            color: white !important;
+        }
+
+       
     </style>
     """, unsafe_allow_html=True)
 
