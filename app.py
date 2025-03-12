@@ -62,11 +62,13 @@ path_saved = os.getcwd() + '/saved_df_update/'
 # Streamlit app title
 st.title("Financial Data and Network Analysis")
 
+st.markdown("The dashboard provides real-time and updated results from the paper "A social media alert system for meme stocks", by Gianstefani, Longo, Riccaboni.")
+
 # Provide link to the paper
 st.markdown("[Read the paper](https://www.tandfonline.com/doi/full/10.1080/14697688.2025.2464179)")
 
 # Include disclaimer
-st.markdown("**Disclaimer:** The views are my own and not necessarily those of the European Commission")
+st.markdown("**Disclaimer:** The views are our own and not necessarily those of the European Commission.")
 
 # Select ticker
 ticker = st.selectbox("Select a ticker:", ['amc', 'gme', 'tsla'])
