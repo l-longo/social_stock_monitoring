@@ -16,39 +16,12 @@ st.markdown("""
         h1, h2, h3, h4, h5, h6, p, label, div, span {
             color: white !important;
         }
-        
-        /* Style the selectbox itself */
-        .stSelectbox div[data-baseweb="select"] {
+        .stSelectbox div[data-baseweb="select"] > div {
             background-color: black !important;
-            color: red !important;
+            color: white !important;
         }
-
-        /* Style the selected value inside the selectbox */
-        .stSelectbox div[data-baseweb="single-value"] {
-            color: red !important;
-        }
-
-        /* Style the dropdown menu */
-        div[data-baseweb="popover"] {
-            background-color: black !important;
-            border: 1px solid red !important;
-        }
-
-        /* Style the options inside the dropdown */
-        div[data-baseweb="option"] {
-            background-color: black !important;
-            color: red !important;
-        }
-
-        /* Highlight the hovered option */
-        div[data-baseweb="option"]:hover {
-            background-color: red !important;
-            color: black !important;
-        }
-
-        /* Style the arrow icon */
-        .stSelectbox svg {
-            fill: red !important;
+        .stSelectbox div[data-baseweb="select"] span {
+            color: white !important;
         }
     </style>
     """, unsafe_allow_html=True)
