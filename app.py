@@ -1,21 +1,20 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import matplotlib.pyplot as plt
 import networkx as nx
 import os
-
-
 
 # Set page config with dark mode theme
 st.set_page_config(page_title="Financial Data and Network Analysis", layout="wide")
 st.markdown("""
     <style>
-        body {
+        .stApp {
             background-color: black;
             color: white;
         }
-        .stApp {
-            background-color: black;
+        h1, h2, h3, h4, h5, h6, p, label, div, span {
+            color: white !important;
         }
     </style>
     """, unsafe_allow_html=True)
@@ -56,14 +55,16 @@ df_financial.set_index("Date", inplace=True)
 # Convert alert dates to datetime
 alter_dates_nvda = pd.to_datetime(alter_dates_nvda, errors="coerce")
 
-# Plot the Close column
+# Plot the Close column from 2024 onwards
 st.subheader(f"{ticker.upper()} Close Price with Highlighted Dates")
-df_financial['Close_diff'] = df_financial["Close"].diff()
-fig = px.line(df_financial, x=df_financial.index, y="Close_diff", title=f"{ticker.upper()} Close Price with Highlighted Dates")
+df_financial_2024 = df_financial[df_financial.index >= "2024-01-01"]
+df_financial_2024['Close_diff'] = df_financial_2024["Close"].diff()
+fig = px.line(df_financial_2024, x=df_financial_2024.index, y="Close_diff", title=f"{ticker.upper()} Close Price with Highlighted Dates")
 
 for date in alter_dates_nvda:
-    fig.add_vline(x=date, line=dict(color="red", width=2, dash="dash"))
-    fig.add_vrect(x0=date, x1=date + pd.Timedelta(days=20), fillcolor="gray", opacity=0.3, line_width=0)
+    if date >= pd.Timestamp("2024-01-01"):
+        fig.add_vline(x=date, line=dict(color="red", width=2, dash="dash"))
+        fig.add_vrect(x0=date, x1=date + pd.Timedelta(days=20), fillcolor="gray", opacity=0.3, line_width=0)
 
 st.plotly_chart(fig)
 
