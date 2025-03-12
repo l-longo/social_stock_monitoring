@@ -28,6 +28,30 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
+st.markdown("""
+    <style>
+        /* Change title color */
+        h1 {
+            color: red !important;
+        }
+
+        /* Change link color */
+        a {
+            color: yellow !important;
+            text-decoration: none;
+        }
+        a:hover {
+            color: orange !important;
+        }
+
+        /* Change disclaimer text color */
+        strong {
+            color: cyan !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+
 # Get current working directory
 path_saved = os.getcwd() + '/saved_df_update/'
 
