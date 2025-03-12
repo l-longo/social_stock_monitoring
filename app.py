@@ -18,10 +18,10 @@ st.markdown("""
         }
         .stSelectbox div[data-baseweb="select"] > div {
             background-color: black !important;
-            color: white !important;
+            color: red !important;
         }
         .stSelectbox div[data-baseweb="select"] span {
-            color: white !important;
+            color: red !important;
         }
     </style>
     """, unsafe_allow_html=True)
