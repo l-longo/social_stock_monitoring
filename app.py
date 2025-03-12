@@ -17,27 +17,38 @@ st.markdown("""
             color: white !important;
         }
         
-        /* Styling the selectbox dropdown */
-        .stSelectbox div[data-baseweb="select"] > div {
+        /* Style the selectbox itself */
+        .stSelectbox div[data-baseweb="select"] {
             background-color: black !important;
             color: red !important;
         }
-        .stSelectbox div[data-baseweb="select"] span {
+
+        /* Style the selected value inside the selectbox */
+        .stSelectbox div[data-baseweb="single-value"] {
             color: red !important;
         }
 
-        /* Styling the dropdown menu */
+        /* Style the dropdown menu */
         div[data-baseweb="popover"] {
             background-color: black !important;
             border: 1px solid red !important;
         }
+
+        /* Style the options inside the dropdown */
         div[data-baseweb="option"] {
             background-color: black !important;
             color: red !important;
         }
+
+        /* Highlight the hovered option */
         div[data-baseweb="option"]:hover {
             background-color: red !important;
             color: black !important;
+        }
+
+        /* Style the arrow icon */
+        .stSelectbox svg {
+            fill: red !important;
         }
     </style>
     """, unsafe_allow_html=True)
