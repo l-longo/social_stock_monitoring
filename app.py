@@ -24,7 +24,7 @@ st.markdown("""
             color: white !important;
         }
     </style>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=False)
 
 # Get current working directory
 path_saved = os.getcwd() + '/saved_df_update/'
