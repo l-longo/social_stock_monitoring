@@ -68,7 +68,7 @@ st.markdown("The dashboard provides real-time and updated results from the paper
 st.markdown("[Read the paper](https://www.tandfonline.com/doi/full/10.1080/14697688.2025.2464179)")
 
 # Include disclaimer
-st.markdown("**Disclaimer:** The views are our own and not necessarily those of the European Commission.")
+st.markdown("**Disclaimer:** The views are our own and do not necessarily reflect those of the European Commission.")
 
 # Select ticker
 ticker = st.selectbox("Select a ticker:", ['amc', 'gme', 'tsla'])
