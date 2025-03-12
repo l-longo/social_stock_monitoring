@@ -1,6 +1,6 @@
 openpyxl 
 pandas 
-matplotlib.pyplot
+matplotlib
 networkx
 plotly==6.0.0
 streamlit==1.42.2
