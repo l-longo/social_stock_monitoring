@@ -15,7 +15,7 @@ st.markdown("""
             color: red;
         }
         h1, h2, h3, h4, h5, h6, p, label, div, span {
-            color: red !important;
+            color: white !important;
         }
         .stSelectbox div[data-baseweb="select"] > div {
             background-color: black !important;
