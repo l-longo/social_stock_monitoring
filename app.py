@@ -105,10 +105,17 @@ for date in alter_dates_nvda:
     next_day = date + pd.Timedelta(days=1)
     next_day2 = date + pd.Timedelta(days=2)
     next_day3 = date + pd.Timedelta(days=3)
+    next_day4 = date + pd.Timedelta(days=4)
+    next_day5 = date + pd.Timedelta(days=5)
+    next_day6 = date + pd.Timedelta(days=6)
+    next_day7 = date + pd.Timedelta(days=7)
+    next_day8 = date + pd.Timedelta(days=8)
+    next_day9 = date + pd.Timedelta(days=9)
+    next_day10 = date + pd.Timedelta(days=10)
     if next_day in df_financial.index:
-        returns_after_alert.append(df_financial.loc[next_day, "Return"])
-        returns_after_alert.append(df_financial.loc[next_day2, "Return"])
-        returns_after_alert.append(df_financial.loc[next_day3, "Return"])
+        returns_after_alert.append(df_financial.loc[next_day, "Return"] + df_financial.loc[next_day2, "Return"] + df_financial.loc[next_day3, "Return"])
+        #returns_after_alert.append(df_financial.loc[next_day2, "Return"])
+        #returns_after_alert.append(df_financial.loc[next_day3, "Return"])
 
 avg_return = sum(returns_after_alert) / len(returns_after_alert) if returns_after_alert else None
 
