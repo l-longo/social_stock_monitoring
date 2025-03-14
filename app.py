@@ -103,8 +103,11 @@ df_financial["Return"] = df_financial["Close"].diff()/100
 returns_after_alert = []
 for date in alter_dates_nvda:
     next_day = date + pd.Timedelta(days=1)
+    next_day2 = date + pd.Timedelta(days=2)
+    next_day3 = date + pd.Timedelta(days=3)
     if next_day in df_financial.index:
         returns_after_alert.append(df_financial.loc[next_day, "Return"])
+        returns_after_alert.append(df_financial.loc[next_day2, "Return"])
 
 avg_return = sum(returns_after_alert) / len(returns_after_alert) if returns_after_alert else None
 
