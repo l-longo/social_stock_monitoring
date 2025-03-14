@@ -122,7 +122,7 @@ for date in alter_dates_nvda:
         #returns_after_alert.append(df_financial.loc[next_day3, "Return"])
 
 avg_return = sum(returns_after_alert) / len(returns_after_alert) if returns_after_alert else None
-var_return = np.var(returns_after_alert, ddof = 1) if returns_after_alert else None
+var_return = np.var(returns_after_alert) if returns_after_alert else None
 
 
 
