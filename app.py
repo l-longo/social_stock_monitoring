@@ -78,8 +78,11 @@ st.markdown("**Disclaimer:** The views are our own and do not necessarily reflec
 ticker = st.selectbox("Select a ticker:", ['amc', 'gme', 'tsla'])
 
 # Select parameters I and network_days
-I = st.number_input("Select I:", value=30, step=5)
-network_days = st.number_input("Select network_days:", value=20, step=5)
+#I = st.number_input("Select I:", value=30, step=5)
+#network_days = st.number_input("Select network_days:", value=20, step=5)
+
+I = 30
+network_days = 20
 
 # Load financial data
 df_financial = pd.read_excel(f'{path_saved}financial_{ticker}_{I}_{network_days}.xlsx')
