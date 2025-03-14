@@ -113,7 +113,10 @@ for date in alter_dates_nvda:
     next_day9 = date + pd.Timedelta(days=9)
     next_day10 = date + pd.Timedelta(days=10)
     if next_day in df_financial.index:
-        returns_after_alert.append(df_financial.loc[next_day, "Return"] + df_financial.loc[next_day2, "Return"] + df_financial.loc[next_day3, "Return"])
+        returns_after_alert.append(df_financial.loc[next_day, "Return"] + df_financial.loc[next_day2, "Return"] + df_financial.loc[next_day3, "Return"] +
+                                  df_financial.loc[next_day4, "Return"] + df_financial.loc[next_day5, "Return"] + df_financial.loc[next_day6, "Return"] +
+                                  df_financial.loc[next_day7, "Return"] + df_financial.loc[next_day8, "Return"] + df_financial.loc[next_day9, "Return"] +
+                                  df_financial.loc[next_day10, "Return"])
         #returns_after_alert.append(df_financial.loc[next_day2, "Return"])
         #returns_after_alert.append(df_financial.loc[next_day3, "Return"])
 
