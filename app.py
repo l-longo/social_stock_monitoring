@@ -97,7 +97,7 @@ df_financial.set_index("Date", inplace=True)
 alter_dates_nvda = pd.to_datetime(alter_dates_nvda, errors="coerce")
 
 # Calculate daily returns
-df_financial["Return"] = df_financial["Close"].diff()
+df_financial["Return"] = df_financial["Close"].diff().diff()
 
 # Calculate average return after alert system turns on
 returns_after_alert = []
