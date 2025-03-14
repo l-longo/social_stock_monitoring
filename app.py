@@ -108,6 +108,7 @@ for date in alter_dates_nvda:
     if next_day in df_financial.index:
         returns_after_alert.append(df_financial.loc[next_day, "Return"])
         returns_after_alert.append(df_financial.loc[next_day2, "Return"])
+        returns_after_alert.append(df_financial.loc[next_day3, "Return"])
 
 avg_return = sum(returns_after_alert) / len(returns_after_alert) if returns_after_alert else None
 
