@@ -64,7 +64,7 @@ st.title("Financial Data and Network Analysis")
 
 
 st.markdown("The dashboard provides updated results from the paper *A social media alert system for meme stocks*, by Gianstefani, Longo, Riccaboni.")
-st.markdown("**Latest public update: March 5 2024**.")
+st.markdown("**Latest public update: March 5 2024**")
 st.markdown("Contacts for questions/feedbacks/suggestions, or requests for real-time (today's) updates: longoluigi1996@gmail.com.")
 
 
