@@ -12,6 +12,7 @@ st.markdown("""
         .stApp {
             background-color: black;
             color: white;
+            color: red;
         }
         h1, h2, h3, h4, h5, h6, p, label, div, span {
             color: red !important;
@@ -20,8 +21,41 @@ st.markdown("""
             background-color: black !important;
             color: white !important;
         }
+        .stSelectbox div[data-baseweb="select"] span {
+            color: white !important;
+        }
     </style>
     """, unsafe_allow_html=True)
+
+
+st.markdown("""
+    <style>
+        /* Change title color */
+        h1 {
+            color: white !important;
+        }
+
+        /* Change link color */
+        a {
+            color: yellow !important;
+            text-decoration: none;
+        }
+        a:hover {
+            color: white !important;
+        }
+         /* Change disclaimer text color */
+        p {
+            color: white !important;
+        }
+        p strong {
+            color: white !important;
+        }
+
+       
+    </style>
+    """, unsafe_allow_html=True)
+
+
 
 st.title("Financial Data and Network Analysis")
 
