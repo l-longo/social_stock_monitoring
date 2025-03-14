@@ -62,10 +62,14 @@ path_saved = os.getcwd() + '/saved_df_update/'
 # Streamlit app title
 st.title("Financial Data and Network Analysis")
 
+
 st.markdown("The dashboard provides real-time and updated results from the paper *A social media alert system for meme stocks*, by Gianstefani, Longo, Riccaboni.")
+st.markdown("Contacts for questions/feedbacks/suggestions: longoluigi1996@gmail.com.")
+
 
 # Provide link to the paper
 st.markdown("[Read the paper](https://www.tandfonline.com/doi/full/10.1080/14697688.2025.2464179)")
+
 
 # Include disclaimer
 st.markdown("**Disclaimer:** The views are our own and do not necessarily reflect those of the European Commission or De Nederlandsche Bank.")
