@@ -4,6 +4,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import networkx as nx
 import os
+import numpy as np
 
 # Set page config with dark mode theme
 st.set_page_config(page_title="Financial Data and Network Analysis", layout="wide")
