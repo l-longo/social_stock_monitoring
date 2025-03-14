@@ -108,7 +108,15 @@ for date in alter_dates_nvda:
 
 avg_return = sum(returns_after_alert) / len(returns_after_alert) if returns_after_alert else None
 
-st.subheader(f"{ticker.upper()} Close Price with Highlighted Dates")
+st.subheader(f"{ticker.upper()} Return with Highlighted Dates")
+
+# Display average return result
+if avg_return is not None:
+    st.subheader(f"Average return after alert for {ticker.upper()}: {avg_return:.2%}")
+else:
+    st.subheader(f"No valid data points to compute average return for {ticker.upper()}.")
+
+
 df_financial_2024 = df_financial[df_financial.index >= "2024-01-01"]
 df_financial_2024['Close_diff'] = df_financial_2024["Close"].diff()
 
@@ -121,11 +129,6 @@ for date in alter_dates_nvda:
 
 st.plotly_chart(fig)
 
-# Display average return result
-if avg_return is not None:
-    st.subheader(f"Average return after alert for {ticker.upper()}: {avg_return:.2%}")
-else:
-    st.subheader(f"No valid data points to compute average return for {ticker.upper()}.")
 
 # Network graph selection
 show_network = st.checkbox("Show Network Graph")
