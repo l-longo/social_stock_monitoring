@@ -122,7 +122,7 @@ for date in alter_dates_nvda:
         #returns_after_alert.append(df_financial.loc[next_day3, "Return"])
 
 avg_return = sum(returns_after_alert) / len(returns_after_alert) if returns_after_alert else None
-var_return = np.var(returns_after_alert) if returns_after_alert else None
+var_return = np.var(returns_after_alert, ddof = 1) if returns_after_alert else None
 
 
 
@@ -131,7 +131,7 @@ st.subheader(f"{ticker.upper()} Return with Highlighted Dates")
 # Display average return result
 if avg_return is not None:
     st.subheader(f"Average return after alert for {ticker.upper()}: {avg_return:.2%}")
-    st.subheader(f"Variance after alert for {ticker.upper()}: {var_return:.2%}. Variance during last year: {np.var(df_financial['Return']):.2%}")
+    st.subheader(f"Variance after alert for {ticker.upper()}: {var_return:.5}. Variance during last year: {np.var(df_financial['Return']):.5}")
 
 else:
     st.subheader(f"No valid data points to compute average return for {ticker.upper()}.")
