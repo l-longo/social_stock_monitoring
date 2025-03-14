@@ -113,6 +113,15 @@ for date in alter_dates_nvda:
     next_day8 = date + pd.Timedelta(days=8)
     next_day9 = date + pd.Timedelta(days=9)
     next_day10 = date + pd.Timedelta(days=10)
+    next_day11 = date + pd.Timedelta(days=11)
+    next_day12 = date + pd.Timedelta(days=12)
+    next_day13 = date + pd.Timedelta(days=13)
+    next_day14 = date + pd.Timedelta(days=14)
+    next_day15 = date + pd.Timedelta(days=15)
+    next_day16 = date + pd.Timedelta(days=16)
+    next_day17 = date + pd.Timedelta(days=17)
+    next_day18 = date + pd.Timedelta(days=18)
+    next_day19 = date + pd.Timedelta(days=19)
     if next_day in df_financial.index:
         returns_after_alert.append(df_financial.loc[next_day, "Return"] + df_financial.loc[next_day2, "Return"] + df_financial.loc[next_day3, "Return"] +
                                   df_financial.loc[next_day4, "Return"] + df_financial.loc[next_day5, "Return"] + df_financial.loc[next_day6, "Return"] +
