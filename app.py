@@ -74,8 +74,8 @@ st.markdown("**Disclaimer:** The views are our own and do not necessarily reflec
 ticker = st.selectbox("Select a ticker:", ['amc', 'gme', 'tsla', 'nvda', 'amzn', 'googl', 'meta', 'pypl', 'nflx', 'pep', 'cost', 'intc', 'sbux'])
 
 # Parameters
-I = 150
-network_days = 10
+I = 360
+network_days = 20
 
 # Get current working directory
 path_saved = os.getcwd() + '/saved_df_update/'
