@@ -81,7 +81,7 @@ network_days = 10
 path_saved = os.getcwd() + '/saved_df_update/'
 
 # Load financial data
-df_financial = pd.read_excel(f'{path_saved}financial_30_10.xlsx')
+df_financial = pd.read_excel(f'{path_saved}financial_{ticker}_30_10.xlsx')
 df = pd.read_excel(f'{path_saved}df_{ticker}_{I}_{network_days}.xlsx', index_col=0)
 
 # Load alert dates
