@@ -71,7 +71,7 @@ st.markdown("[Read the paper](https://www.tandfonline.com/doi/full/10.1080/14697
 st.markdown("**Disclaimer:** The views are our own and do not necessarily reflect those of the European Commission or De Nederlandsche Bank.")
 
 # Select ticker
-ticker = st.selectbox("Select a ticker:", ['amc', 'gme', 'tsla'])
+ticker = st.selectbox("Select a ticker:", ['amc', 'gme', 'tsla', 'nvda', 'amzn', 'googl', 'meta', 'pypl', 'nflx', 'pep', 'cost', 'intc', 'sbux'])
 
 # Parameters
 I = 30
