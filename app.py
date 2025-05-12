@@ -140,7 +140,7 @@ st.subheader(f"{ticker.upper()} Return with Highlighted Dates")
 # Display average return result
 if avg_return is not None:
     st.subheader(f"Average return (next 20 consecutive days) after alert for {ticker.upper()}: {avg_return:.2%}")
-    st.subheader(f"Variance (relative to last year variance) after alert for {ticker.upper()}: {var_return/np.var(df_financial['Return']):.5}.")
+    st.subheader(f"Variance (relative to last year's variance) after alert for {ticker.upper()}: {var_return/np.var(df_financial['Return']):.5}.")
 
 else:
     st.subheader(f"No valid data points to compute average return for {ticker.upper()}.")
